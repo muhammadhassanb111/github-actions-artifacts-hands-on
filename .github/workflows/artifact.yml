@@ -19,7 +19,9 @@ jobs:
         name: hello-artifact
         path: hello.txt
     - name: pwd
-      run: pwd
+      run: |
+            pwd
+            ls -la
 
   download:
     runs-on: ubuntu-latest
@@ -35,4 +37,6 @@ jobs:
     - name: Display content of hello.txt
       run: cat ./artifacts/hello.txt
     - name: pwd
-      run: pwd
+      run: |
+            pwd
+            ls -la
